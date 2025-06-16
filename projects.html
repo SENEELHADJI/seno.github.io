@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* En-tête (si vous l'ajoutez) */
+        header {
+            background: #333;
+            color: #09ee09;
+            padding: 1rem 0;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #09ee09;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #faf8f8;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background: yellow;
+            color: #32CD32;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px; /* Augmentez la largeur maximale si nécessaire */
+            margin: 20px auto; /* Centre le contenu principal */
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        /* Conteneur Flexbox pour les projets */
+        .projects-container {
+            display: flex; /* Active Flexbox */
+            flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace est insuffisant */
+            gap: 20px; /* Espace entre les projets */
+            justify-content: center; /* Centre les projets horizontalement */
+        }
+
+        .project {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0; /* Supprime la marge inférieure existante */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1; /* Permet aux projets de s'agrandir pour remplir l'espace disponible */
+            min-width: 280px; /* Largeur minimale pour chaque projet, ajustez si nécessaire */
+            max-width: 350px; /* Largeur maximale pour chaque projet, ajustez si nécessaire */
+            text-align: center; /* Centre le contenu de chaque projet */
+        }
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+        .project button {
+            background: #08f1a4;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease; /* Ajoute une transition au survol */
+        }
+
+        .project button:hover {
+            background: #32CD32;
+        }
+
+        /* Pied de page (si vous l'ajoutez) */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EL HADJI SENE</h1>
+        
+    </header>
+
+    <main>
+        <section>
+            <h2>Projets Réalisés</h2>
+            <div class="projects-container"> <div class="project">
+                    <h3>Projet 1 : </h3>
+                    <p>Description courte du projet 1. Ce projet a été réalisé en utilisant HTML, CSS et JavaScript pour créer une interface interactive.</p>
+                    <button onclick="window.location.href='Wireframe-projet.pdf';">Voir</button>
+                </div>
+                <div class="project">
+                    <h3>Projet 2 :</h3>
+                    <p>Description courte du projet 2. Il s'agit d'une application développée pour iOS et Android, axée sur l'expérience utilisateur.</p>
+                    <button onclick="window.location.href='Projet.pdf';">Voir</button>
+                </div>
+                <div class="project">
+                    <h3>Projet 3 :</h3>
+                    <p>Description courte du projet 3. Ce projet a impliqué l'extraction, la transformation et l'analyse de données complexes pour des informations exploitables.</p>
+                    <button onclick="window.location.href='Activité 1.jpg';">Voir</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Projet réalisé par SENE EL HADJI avec JavaScript, HTML et CSS.</p>
+    </footer>
+
+</body>
+</html>

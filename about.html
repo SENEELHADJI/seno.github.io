@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos</title>
+<style>
+
+   body {
+   font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0; /* Marge réinitialisée à 0 pour un meilleur contrôle */
+            padding: 0;
+            background-color: #f4f4f4;
+            color: black;
+}
+
+main {
+     font-weight: bold; /* Texte en gras dans la section principale */
+            padding: 2rem; /* Espacement accru pour un meilleur espacement du contenu */
+            text-align: left;
+            max-width: 960px; /* Limitation de la largeur du contenu pour la lisibilité */
+            margin: 20px auto; /* Centrage du contenu principal */
+            background-color: #fff; /* Fond blanc pour le contenu principal */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la profondeur */
+            border-radius: 8px; /* Coins arrondis pour la zone de contenu principal */
+}
+.btn-download {
+            display: inline-block; /* Fait en sorte que le bouton se comporte comme un bloc en ligne */
+            background-color: #32CD32; /* Fond vert pour le bouton */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px; /* Espacement au-dessus du bouton */
+            transition: background-color 0.3s ease; /* Transition fluide au survol */
+        }
+section {
+    margin-bottom: 5rem;
+    .photo-et-texte {
+    display: table-cell;
+    align-items: center;
+    }
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Rend l'image circulaire */
+    object-fit: cover; /* Adapte l'image pour remplir le cadre */
+    border: 3px solid red; /* Ajoute une bordure esthétique */
+}
+}
+</style>
+</head>
+<body>
+    
+    <main>
+       <section>
+            <h1>À propos</h1>
+            </section> 
+          <section> 
+            <div class="photo-et-texte">
+            <img src="image.png" alt="ma photo" class="image">
+            
+                <p>
+                    Je m'appelle EL HADJI SENE, passionné par la création de sites web modernes et interactifs.
+                </p>
+                <p>
+                        Je suis actuellement étudiant en développement web, et je cherche à améliorer mes compétences en HTML, CSS et JavaScript.
+                </p>
+                <p>
+                    J'adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.
+                </p>
+                  
+            <button class="btn-download" onclick="window.location.href='cv.pdf';">Voici mon CV</button>
+                </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - EL HADJI SENE</title>
+    <style>
+        /* Styles généraux pour le corps de la page */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0; /* Marge réinitialisée à 0 pour un meilleur contrôle */
+            padding: 0;
+            background-color: #f4f4f4;
+            color: black;
+        }
+
+        /* Styles pour l'en-tête */
+        header {
+            background: #333;
+            color: #09ee09;
+            padding: 1rem 0; /* Espacement ajusté pour un meilleur visuel */
+            text-align: left;
+            display: flex; /* Utilisation de flexbox pour un meilleur alignement */
+            justify-content: space-between; /* Espacement entre le titre et la navigation */
+            align-items: center; /* Alignement vertical des éléments */
+            padding-left: 20px; /* Ajout d'un espacement à gauche */
+            padding-right: 20px; /* Ajout d'un espacement à droite */
+        }
+
+        header h1 {
+            margin: 0; /* Suppression de la marge par défaut */
+            color: #09ee09; /* Assure la cohérence de la couleur du titre */
+        }
+
+        /* Styles pour la navigation dans l'en-tête */
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Suppression de la marge par défaut */
+            text-align: right;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #faf8f8;
+            text-decoration: none;
+            padding: 5px 10px; /* Ajout de rembourrage pour la zone cliquable */
+            border-radius: 5px; /* Coins légèrement arrondis pour les liens */
+            transition: background 0.3s, color 0.3s; /* Transition fluide pour les effets de survol */
+        }
+
+        header nav ul li a:hover {
+            background: yellow;
+            color: #32CD32;
+        }
+
+        /* Styles pour le contenu principal */
+        main {
+            font-weight: bold; /* Texte en gras dans la section principale */
+            padding: 2rem; /* Espacement accru pour un meilleur espacement du contenu */
+            text-align: left;
+            max-width: 960px; /* Limitation de la largeur du contenu pour la lisibilité */
+            margin: 20px auto; /* Centrage du contenu principal */
+            background-color: #fff; /* Fond blanc pour le contenu principal */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la profondeur */
+            border-radius: 8px; /* Coins arrondis pour la zone de contenu principal */
+        }
+
+        /* Styles pour les sections */
+        section {
+            margin-bottom: 2rem; /* Marge inférieure réduite pour un meilleur flux */
+        }
+
+        /* Style pour le titre "Bienvenue sur mon Portfolio" */
+        .portfolio-title {
+            color: green; /* Couleur du texte définie sur vert */
+        }
+
+        /* Styles pour la disposition photo et texte */
+        .photo-et-texte {
+            display: flex; /* Utilisation de flexbox pour l'alignement de l'image et du texte */
+            align-items: center; /* Alignement vertical des éléments */
+            gap: 20px; /* Espacement entre l'image et le texte */
+            flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+            justify-content: flex-start; /* Aligne les éléments au début (à gauche) */
+        }
+
+        /* Styles pour l'image de profil */
+        .image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Rend l'image circulaire */
+            object-fit: cover; /* Adapte l'image pour remplir le cadre */
+            border: 3px solid red; /* Ajoute une bordure esthétique */
+            flex-shrink: 0; /* Empêche l'image de rétrécir */
+        }
+
+        /* Styles pour le bouton de téléchargement du CV */
+        .btn-download {
+            display: inline-block; /* Fait en sorte que le bouton se comporte comme un bloc en ligne */
+            background-color: #32CD32; /* Fond vert pour le bouton */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px; /* Espacement au-dessus du bouton */
+            transition: background-color 0.3s ease; /* Transition fluide au survol */
+        }
+
+        .btn-download:hover {
+            background-color: #28a745; /* Vert plus foncé au survol */
+        }
+
+        /* Styles pour le pied de page */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 30px; /* Ajout d'un espace au-dessus du pied de page */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EL HADJI SENE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="portfolio-title">Bienvenue sur mon Portfolio</h2>
+            <div class="photo-et-texte">
+                <img src="image.png" alt="Ma photo" class="image">
+                <div>
+                    <p>
+                        Vous êtes sur la page principale de mon portfolio ! Découvrez mes compétences, mes projets, mes activités ainsi que mes centres d'intérêt.
+                    </p>
+                    <p>
+                        Je suis passionné par le développement web. J'apprends actuellement **HTML**, **CSS**, et **JavaScript** pour créer des interfaces utilisateurs interactives et attrayantes.
+                    </p>
+                    <p>
+                        J'aime explorer les nouvelles technologies et résoudre des problèmes créatifs.
+                    </p>
+                    <p>
+                        Soyez les Bienvenus !
+                    </p>
+                    <button class="btn-download" onclick="window.open('cv.pdf', '_blank');">Voici mon CV</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Projet réalisé par SENE EL HADJI avec JavaScript, HTML et CSS.</p>
+    </footer>
+</body>
+</html>
