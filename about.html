@@ -4,81 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos</title>
-<style>
-
-   body {
-   font-family: 'Times New Roman', Times, serif;
-            line-height: 1.6;
-            margin: 0; /* Marge réinitialisée à 0 pour un meilleur contrôle */
-            padding: 0;
-            background-color: #f4f4f4;
-            color: black;
-}
-
-main {
-     font-weight: bold; /* Texte en gras dans la section principale */
-            padding: 2rem; /* Espacement accru pour un meilleur espacement du contenu */
-            text-align: left;
-            max-width: 960px; /* Limitation de la largeur du contenu pour la lisibilité */
-            margin: 20px auto; /* Centrage du contenu principal */
-            background-color: #fff; /* Fond blanc pour le contenu principal */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la profondeur */
-            border-radius: 8px; /* Coins arrondis pour la zone de contenu principal */
-}
-.btn-download {
-            display: inline-block; /* Fait en sorte que le bouton se comporte comme un bloc en ligne */
-            background-color: #32CD32; /* Fond vert pour le bouton */
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 20px; /* Espacement au-dessus du bouton */
-            transition: background-color 0.3s ease; /* Transition fluide au survol */
-        }
-section {
-    margin-bottom: 5rem;
-    .photo-et-texte {
-    display: table-cell;
-    align-items: center;
-    }
-.image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Rend l'image circulaire */
-    object-fit: cover; /* Adapte l'image pour remplir le cadre */
-    border: 3px solid red; /* Ajoute une bordure esthétique */
-}
-}
-</style>
+<link rel="stylesheet" href="about.css">
 </head>
 <body>
-    
+    <header>
+        <h1>À propos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="Compétences.html">Compétences</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-       <section>
-            <h1>À propos</h1>
-            </section> 
-          <section> 
-            <div class="photo-et-texte">
-            <img src="image.png" alt="ma photo" class="image">
-            
-                <p>
-                    Je m'appelle EL HADJI SENE, passionné par la création de sites web modernes et interactifs.
-                </p>
-                <p>
-                        Je suis actuellement étudiant en développement web, et je cherche à améliorer mes compétences en HTML, CSS et JavaScript.
-                </p>
-                <p>
-                    J'adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.
-                </p>
-                  
-            <button class="btn-download" onclick="window.location.href='cv.pdf';">Voici mon CV</button>
-                </div>
-        </section>
+       <section id="about" class="section">
+<h2>EL HADJI SENE</h2>
+<p>
+Je suis un professionnel polyvalent spécialisé en développement web, traitement de données
+et enseignement. Passionné par les technologies numériques, j’aime transformer des idées en
+solutions concrètes, qu’il s’agisse d’applications web, d’outils d’analyse ou de projets
+pédagogiques.
+</p>
+<p>
+Grâce à un Master en sociologie, des attestations en bureautique, traitement de données,
+développement web avancé et un certificat d’aptitude pédagogique, je développe des projets
+solides, clairs et orientés résultats.
+</p>
+</section>
+<!-- SECTION COMPETENCES -->
+<section id="skills" class="section">
+<h2>Compétences</h2>
+<ul class="skills-list">
+<li>HTML / CSS</li>
+<li>JavaScript</li>
+<li>Laravel</li>
+<li>React</li>
+<li>Traitement de données</li>
+<li>Pédagogie & conception de contenus</li>
+</ul>
+</section>
+<!-- SECTION PROJETS -->
+<section id="projects" class="section">
+<h2>Projets réalisés</h2>
+<div class="projects-grid">
+<div class="project-card">
+<h3>Application Laravel</h3>
+<p>Développement d'une application web avec authentification et dashboard.</p>
+</div>
+<div class="project-card">
+<h3>Interface React</h3>
+<p>Création d'une interface utilisateur moderne en React.</p>
+</div>
+<div class="project-card">
+<h3>Tableau de bord données</h3>
+<p>Analyse et visualisation de données avec outils bureautiques avancés.</p>
+</div>
+</div>
+</section>
+<!-- SECTION SERVICES -->
+<section id="services" class="section">
+<h2>Services</h2>
+<ul class="services-list">
+<li>Développement de sites web modernes (Laravel, React)</li>
+<li>Création d’applications web</li>
+<li>Analyse et traitement de données</li>
+<li>Conception de supports pédagogiques</li>
+<li>Accompagnement technique</li>
+</ul>
+</section>
+<!-- SECTION CONTACT -->
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Email : <strong>seneelhadji4@gmail.com</strong></p>
+<p>Téléphone : <strong>77 851 13 98 </strong></p>
+<p>Localisation : Sénégal</p>
+</section>
+<section id="Autres infos" class="section">
+    <h2>Autres infos</h2>
+    <p>DCLIC, mon formateur en <strong>développement web</strong> c'est <a href="https://dclic.francophonie.org" target="_blank">ICI</a></p>
+     <p>Envoyez moi <a href="mailto:monmail@gmail.com">un mail !</a></p>  
+</section>
+<div class="back-link">
+                <a href="index.html">Retournez à la page d'accueil</a>
+            </div>
+<footer>
+        <p>&copy; Projet réalisé par SENE EL HADJI avec HTML, CSS et JavaScript.</p>
+</footer>
+</section>
     </main>
-
 </body>
 </html>
