@@ -4,171 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <style>
-        /* Styles généraux pour le corps de la page */
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.9;
-            margin: 0; /* Réinitialisé à 0 pour un meilleur contrôle */
-            padding: 0;
-            background-color: rgb(83, 83, 87);
-            color: #eee7e7;
-        }
-
-        /* Styles de l'en-tête */
-        header {
-            background: black;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        /* Styles du contenu principal */
-        main {
-            padding: 2rem;
-            max-width: 650px; /* Largeur maximale du contenu principal */
-            margin: 20px auto; /* Centre le contenu principal et ajoute une marge supérieure */
-            background-color: #f3eeee; /* Couleur de fond du formulaire, déplacée ici */
-            border-radius: 8px; /* Bords arrondis pour le conteneur principal */
-            box-shadow: 0 4px 15px rgba(240, 236, 236, 0.3); /* Ombre pour la profondeur */
-        }
-
-        section {
-            margin-bottom: 2rem; /* Réduction de la marge pour un meilleur espacement */
-        }
-
-        /* Styles pour le titre "Vous avez un Projet..." */
-        h2 {
-            text-align: center; /* Centre le texte du titre */
-            margin-bottom: 2rem; /* Espace sous le titre */
-            color: #f7b705; /* Couleur distinctive pour le titre du formulaire */
-        }
-
-        /* Styles du formulaire de contact */
-        #contact-form {
-            display: flex;
-            flex-direction: column;
-            /* align-items: center;  Retiré pour permettre aux champs de prendre toute la largeur */
-            padding: 0; /* Pas de padding ici, il est sur le main */
-            /* border-radius: 5px; Déplacé vers main */
-        }
-
-        /* Conteneur pour le prénom et le nom */
-        .form-row { /* Renommé de 'row' pour éviter les conflits et être plus spécifique */
-            display: flex;
-            justify-content: space-between;
-            width: 100%; /* S'assure qu'il prend toute la largeur du formulaire */
-            gap: 1rem; /* Espace entre les champs Prénom et Nom */
-            margin-bottom: 1rem; /* Espace sous cette ligne */
-        }
-
-        .form-row > div {
-            flex: 1; /* Permet aux champs Prénom et Nom de se partager l'espace */
-        }
-
-        /* Styles pour les champs de formulaire individuels (email, sujet, description) */
-        .form-group {
-            width: 100%; /* S'assure que ces groupes prennent toute la largeur */
-            margin-bottom: 1rem; /* Espace entre chaque groupe de champ */
-        }
-
-        label {
-            display: block; /* S'assure que le label est sur sa propre ligne */
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #131212; /* Couleur des labels pour une meilleure lisibilité */
-        }
-
-        input, textarea {
-            width: 100%; /* Prend toute la largeur disponible de son parent */
-            padding: 12px; /* Augmenté le padding pour une meilleure ergonomie */
-            font-size: 1rem;
-            border: 1px solid #555; /* Bordure plus douce */
-            border-radius: 6px; /* Bords légèrement arrondis */
-            background-color: #fcfafa; /* Fond des champs plus sombre */
-            color: #eee7e7; /* Couleur du texte dans les champs */
-            box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-        }
-
-        input::placeholder, textarea::placeholder {
-            color: #a0a0a0; /* Couleur des placeholders */
-        }
-
-        textarea {
-            resize: vertical; /* Permet uniquement le redimensionnement vertical */
-            height: 120px; /* Hauteur initiale augmentée */
-        }
-
-        button {
-            width: auto; /* Permet au bouton de s'ajuster à son contenu ou de le centrer */
-            padding: 12px 25px; /* Padding ajusté pour le bouton */
-            background-color: rgb(5, 247, 206);
-            color: #080808; /* Couleur de texte plus foncée pour le bouton */
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.1rem; /* Taille de police légèrement plus grande */
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            align-self: center; /* Centre le bouton dans le conteneur flex-column */
-            margin-top: 1.5rem; /* Espace au-dessus du bouton */
-        }
-
-        button:hover {
-            background-color: #32CD32; /* Vert survolé */
-            color: #fff; /* Texte blanc au survol */
-        }
-
-        /* Pied de page */
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: #fff;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
-        <h1>Contactez-moi</h1>
+        <h1>Contactez-moi !</h1>
     </header>
     <main>
         <section>
-            <h2>Vous avez un Projet en tête, N'hésitez pas à me contacter!</h2>
-            <form id="contact-form">
+            <h2>Vous avez un projet en tête ? N'hésitez pas à me contacter !</h2>
+        </section>
+        <form id="contact-form" method="post" action="traitement.php">
+            <fieldset>
+                <legend>Informations essentielles</legend>
                 <div class="form-row">
-                    <div>
-                        <label for="first-name">Prénom :</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" required>
+                    <div class="form-group">
+                        <label for="prenom">Votre prénom :</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Ex: Modou" required>
                     </div>
-                    <div>
-                        <label for="last-name">Nom :</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Votre nom" required>
+                    <div class="form-group">
+                        <label for="nom">Votre nom :</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ex: SARR" required>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Votre numéro de téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="77 000 00 00" required>
+                </div>
+                <div class="form-group">
+                    <label for="site">Adresse de votre site web :</label>
+                    <input type="url" id="site" name="site" placeholder="https://www.site.sn">
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre email :</label>
+                    <input type="email" id="email" name="email" placeholder="seneelha@gmail.com" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informations secondaires</legend>
+                <!-- Section Sexe (même ligne) -->
+        <div class="form-group">
+        <label>Votre sexe :</label>
+        <div class="radio-row">
+        <label class="radio-label">
+            <input type="radio" name="sexe" id="homme" value="masculin">
+            Masculin
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="sexe" id="femme" value="feminin">
+            Féminin
+        </label>
+        </div>
+        </div>
+
+            <!-- Section Diplômes (même ligne, scroll horizontal si besoin) -->
+        <div class="form-group">
+         <label>Votre diplôme académique :</label>
+            <div class="radio-row">
+        <label class="radio-label">
+            <input type="radio" name="diplome" value="doctorat" id="doctorat">
+            Doctorat
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="diplome" value="master" id="master">
+            Master
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="diplome" value="licence" id="licence">
+            Licence
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="diplome" value="bac" id="bac">
+            Baccalauréat
+        </label>
+            </div>
+        </div>
+
+                <div class="form-group">
+                    <label for="langue">Sélectionnez votre langue :</label>
+                    <select name="langue" id="langue">
+                        <optgroup label="Langues nationales">
+                            <option value="wolof">Wolof</option>
+                            <option value="serere">Sérère</option>
+                            <option value="diola">Diola</option>
+                            <option value="peul">Peul</option>
+                        </optgroup>
+                        <optgroup label="Langues étrangères">
+                            <option value="francais">Français</option>
+                            <option value="anglais">Anglais</option>
+                            <option value="espagnol">Espagnol</option>
+                            <option value="allemand">Allemand</option>
+                        </optgroup>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+                    <label for="sujet">Sujet :</label>
+                    <input type="text" id="sujet" name="sujet" placeholder="Votre projet" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="Sujet">Sujet :</label>
-                    <input type="text" id="Sujet" name="Sujet" placeholder="Votre projet" required>
-                </div>
-
                 <div class="form-group">
                     <label for="message">Description :</label>
                     <textarea id="message" name="message" placeholder="Votre message" required></textarea>
                 </div>
-
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-    </main>
+            </fieldset>
+            <button type="submit">Transmettez !</button>
+        </form>
+   
+         <div class="back-link">
+                <a href="index.html">Retournez à la page d'accueil</a>
+            </div>
+     </main>
     <footer>
-        <p>&copy; Projet réalisé par SENE EL HADJI avec JavaScript, HTML et CSS.</p>
+        <p>&copy; Projet réalisé par SENE EL HADJI avec HTML, CSS et JavaScript.</p>
     </footer>
 </body>
 </html>
